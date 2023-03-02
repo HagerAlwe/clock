@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:linear-gradient(to right, hsl(293, 81%, 52%),
+    hsl(312, 43%, 45%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+ 
+.clock {
+    width: 30%;
+    height: 300px;
+    background-color: rgba(255, 15, 187, 0.622);
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+
+}
+.clock::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    z-index: 11;
+    width: 18px;
+    height: 18px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,50%);
+
+}
+
+    .clock .namber {
+        font-size: 20px;
+
+        --rotation:0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotate(var(--rotation));
+    }
+
+
+.clock .namber1{--rotation:30deg;}
+.clock .namber2{--rotation:60deg;}
+.clock .namber3{--rotation:90deg;}
+.clock .namber4{--rotation:120deg;}
+.clock .namber5{--rotation:150deg;}
+.clock .namber6{--rotation:180deg;}
+.clock .namber7{--rotation:210deg;}
+.clock .namber8{--rotation:240deg;}
+.clock .namber9{--rotation:270deg;}
+.clock .namber10{--rotation:300deg;}
+.clock .namber11{--rotation:330deg;}
+
+
+
+.clock .hand {
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 2%;
+    height: 45%;
+    border: 1px solid rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg)) ;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: rgb(224, 20, 20);
+}
+
+
+.clock .hand .minute {
+    width: 7px;
+    height: 45%;
+    background-color: rgb(0, 0, 0);
+}
+
+.clock .hand hour {
+    width: 7px;
+    height: 40%;
+    background-color: rgb(0, 0, 0);
+}
+
+
+@media (min-width:200px) and (max-width:1200px) {
+    .clock {
+        width: 91%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
